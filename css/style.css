@@ -6,12 +6,16 @@ body {
     font-family: 'Manrope', sans-serif;
 }
 
+main, header {
+    width: 100%;
+    text-align: center;
+}
+
 .main-card {
     padding: 20px;
     display: inline-grid;
     flex-wrap: wrap;
     flex-direction: column;
-    margin: auto;
     width: 1200px;
     background-color: #D2D2DF;
 }
@@ -24,7 +28,7 @@ body {
     background-color: #D2D2DF;
 }
 
-.login {
+.login, .subscribe {
     width: 30%;
     font-size: large;
     background-color: #D2D2DF;
@@ -32,6 +36,11 @@ body {
 }
 
 .login form label {
+    display: block;
+    padding: 10px;
+}
+
+.subscribe form label {
     display: block;
     padding: 10px;
 }
@@ -47,9 +56,9 @@ h1, h2{
 }
 
 .top-nav {
-    width: 605px;
-    margin: auto;
+    width: 1205px;
     font-size: large;
+    display: inline-block;
     padding: 5px;
     background-color: #FFC4E1;
 }
@@ -58,6 +67,6 @@ h1, h2{
     padding: 23px;
     width: 1200px;
     font-size: large;
+    display: inline-grid;
     background-color: #D2D2DF;
 }
-
