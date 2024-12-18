@@ -27,13 +27,13 @@ function getNHLTeams() {
 }
 function showDetails(teamId) {
     fetch(`https://hockey-highlights-api.p.rapidapi.com/matches/${teamId}`, options)
-        .then(response => { return response.json()})
+        .then(response => { return response.json() })
         .then(teamDetails => {
             // Check if the response contains a valid `data` property
-                console.log(teamId);
-                if (teamDetails.length >= 0) {
-                    const team = teamDetails
-                    const html = `<img id=${team[0].teamId} src="${team[0].logo}" alt="logo">
+            console.log(teamId);
+            if (teamDetails.length >= 0) {
+                const team = teamDetails
+                const html = `<img id=${team[0].id} src="${team[0].logo}" alt="logo">
                 <h2>Team: ${team[0].name}</h2>
                 <h3>${team[0].homeTeam}</h3>
                 <h3>vs ${team[0].awayTeam}</h3>
@@ -41,10 +41,10 @@ function showDetails(teamId) {
                 <p>Week: ${team[0].week}</p>
                 <p>Date: ${team[0].date}</p>`;
                 console.log(team[0])
-                    document.getElementById('getDetails').insertAdjacentHTML('beforeend', html);
-                } else {
-                    console.error("Unexpected API response:", teamDetails[0]);
-                }
+                document.getElementById('getDetails').insertAdjacentHTML('beforeend', html);
+            } else {
+                console.error("Unexpected API response:", teamDetails[0]);
+            }
         })
         .catch(error => console.error(error));
 }
