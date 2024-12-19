@@ -9,11 +9,6 @@
 </head>
 <body>
     <header>
-        <div class="top-nav">
-            <a href="index.html">Home</a>
-            <a href="login.html">Login</a>
-            <a href="subscribe.html">Subscribe</a>
-        </div>
     </header>
     <main>
         <div class="main-card">
@@ -26,15 +21,23 @@
                 about each of them. Whether you are a hockey lover, or want to know more about the sport, Planet Hockey is your
                 go-to site!</p>
         </div>
-        <button id="getTeams">Get Teams</button>
-        <div id="showTeams">
-            <div id="getDetails"></div>
+        <div class="range">
+            <button id="getTeams">Get Teams</button>
+            <div class="details">
+                <div id="getTeamDetails"></div>
+                <div id="getLeagueDetails"></div>
+            </div>
+            <div id="showTeams"></div>
+            <button id="getLeagues">Get Leagues</button>
+            <div id="showLeagues"> </div>
+            <button id="redirect">Go Back</button>
         </div>
     </main>
     <footer>
         <p id="copyright"></p>
     </footer>
     <script src="js/hockey.js"></script>
+    <script src="js/redirect.js"></script>
     <script src="js/footer.js"></script>
 </body>
 </html>
